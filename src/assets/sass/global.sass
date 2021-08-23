@@ -1,0 +1,87 @@
+$xl: 1200px
+$lg: 992px
+$md: 768px
+$xs: 576px
+
+\:root
+	--white: rgba(255,255,255,1)
+
+*
+	font-family: Roboto, sans-serif
+	&::-webkit-scrollbar
+		width: 6px
+		background-color: var(--black)
+	&::-webkit-scrollbar-thumb
+		border-radius: 6px
+		background-color: var(--yellow)
+*, a
+	color: var(--black)
+h1, h2, h3, h4, h5, h6, button
+	font-family: 'Source Sans Pro', sans-serif
+button
+	background-color: transparent
+	border: none
+	outline: none
+	padding: 12px 20px
+	border-radius: 8px
+	font-size: 18px
+
+.fix-box
+	height: 100%
+	width: 290px
+	min-width: 290px
+	max-width: 1920px
+	margin-left: auto
+	margin-right: auto
+	@media(min-width:$md)
+		width: 708px
+	@media(min-width:$xl)
+		width: 1170px
+
+.btn-yellow
+	background-color: #FDB461
+	color: #3E2203
+	font-weight: 600
+.btn-corner
+	border: 2px solid #FDB461
+	color: #FDB461
+	font-weight: 600
+
+.hero
+	margin-top: 300px
+.second
+	padding: 495px 0 108px
+.third
+	margin-top: 360px
+.bg-box
+	width: 100%
+	height: 0
+	overflow: visible
+	& .bg-ph-box
+		position: relative
+		z-index: -1
+	& .bg-ph
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+	& .bg-first
+		height: 1530px
+		& .bg-ph
+			top: -120px
+	& .bg-second
+		height: 2160px
+		& .bg-ph
+			top: 0
+	& .bg-color
+		height: 368px
+		& .bg-ph
+		height: 368px
+			top: 0
+			background-color: #000000
+.text-white-color
+	& *
+		color: var(--white)
