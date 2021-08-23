@@ -28,6 +28,7 @@ const src = {
     fontsConvert: './src/assets/fonts/',
     ttfFonts: './src/assets/fonts/**/*.ttf',
     html: './src/*.html',
+    htmlPartials: './src/assets/html/*.html',
     htmlComponents: './src/assets/html/**/*.html'
 }
 
@@ -38,7 +39,8 @@ const build = {
     img: './build/assets/img/',
     lib: './build/assets/lib/',
     fonts: './build/assets/fonts/',
-    html: './build/'
+    html: './build/',
+    htmlPartials: './build/template-partials/',
 }
 
 // WATCH
@@ -122,19 +124,19 @@ function fonts() {
 
 function compress () {
     return gulp.src(src.img)
-    .pipe(changed(build.img))
-    .pipe(webp({
-        quality: 80
-    }))
-        .pipe(gulp.dest(build.img))
+    // .pipe(changed(build.img))
+    // .pipe(webp({
+    //     quality: 80
+    // }))
+    //     .pipe(gulp.dest(build.img))
         
-    .pipe(gulp.src(src.img))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true,
-            optimizationlevel: 5
-        }))
+    // .pipe(gulp.src(src.img))
+    //     .pipe(imagemin({
+    //         progressive: true,
+    //         svgoPlugins: [{removeViewBox: false}],
+    //         interlaced: true,
+    //         optimizationlevel: 5
+    //     }))
         .pipe(gulp.dest(build.img))
     .pipe(browserSync.stream())
 }
@@ -144,9 +146,10 @@ function clean() {
 }
 
 function html() {
+    gulp.src(src.htmlPartials)
+        .pipe(gulp.dest(build.htmlPartials));
     return gulp.src(src.html)
         .pipe(fileinclude())
-        .pipe(webphtml())
         .pipe(gulp.dest(build.html))
 }
 

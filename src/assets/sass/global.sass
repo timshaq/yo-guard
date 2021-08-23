@@ -1,3 +1,4 @@
+$xxl: 1440px
 $xl: 1200px
 $lg: 992px
 $md: 768px
@@ -5,9 +6,17 @@ $xs: 576px
 
 \:root
 	--white: rgba(255,255,255,1)
+	--black: rgba(0, 0, 0, 1)
+	--blue: rgba(36, 50, 133, 1)
+	--blue-light: rgba(126, 131, 166, 1)
+	--blue-light2: rgba(134, 139, 172, 1)
+	--blue-lightness: rgba(241, 243, 253, 1)
+	--orange: rgba(250, 96, 32, 1)
+	--gray: rgba(182, 183, 187, 1)
+	--border: rgba(234, 236, 249, 1)
 
 *
-	font-family: Roboto, sans-serif
+	font-family: Montserrat, sans-serif
 	&::-webkit-scrollbar
 		width: 6px
 		background-color: var(--black)
@@ -16,15 +25,11 @@ $xs: 576px
 		background-color: var(--yellow)
 *, a
 	color: var(--black)
-h1, h2, h3, h4, h5, h6, button
-	font-family: 'Source Sans Pro', sans-serif
-button
-	background-color: transparent
-	border: none
-	outline: none
-	padding: 12px 20px
-	border-radius: 8px
-	font-size: 18px
+
+p
+	font-weight: 500
+	font-size: 15px
+	line-height: 24px
 
 .fix-box
 	height: 100%
@@ -37,51 +42,5 @@ button
 		width: 708px
 	@media(min-width:$xl)
 		width: 1170px
-
-.btn-yellow
-	background-color: #FDB461
-	color: #3E2203
-	font-weight: 600
-.btn-corner
-	border: 2px solid #FDB461
-	color: #FDB461
-	font-weight: 600
-
-.hero
-	margin-top: 300px
-.second
-	padding: 495px 0 108px
-.third
-	margin-top: 360px
-.bg-box
-	width: 100%
-	height: 0
-	overflow: visible
-	& .bg-ph-box
-		position: relative
-		z-index: -1
-	& .bg-ph
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		object-fit: cover
-		object-position: center
-	& .bg-first
-		height: 1530px
-		& .bg-ph
-			top: -120px
-	& .bg-second
-		height: 2160px
-		& .bg-ph
-			top: 0
-	& .bg-color
-		height: 368px
-		& .bg-ph
-		height: 368px
-			top: 0
-			background-color: #000000
-.text-white-color
-	& *
-		color: var(--white)
+	@media(min-width:$xxl)
+		width: 1230px
