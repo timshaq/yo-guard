@@ -1,0 +1,17 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&.grid-card-3 {
+		row-gap: 30px;
+		& .card {
+			width: 31%;
+		}
+	}
+	&.grid-card-4 {
+		row-gap: 30px;
+		& .card {
+			width: 23.1707%;
+		}
+	}
+}

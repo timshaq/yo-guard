@@ -1,0 +1,27 @@
+.features {
+	padding: 120px 0;
+	&__fix-box {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__slider {
+		width: 390px;
+	}
+	&__text {
+		width: 780px;
+	}
+	&__title {
+		margin-bottom: 22px;
+	}
+	&__p {
+	}
+	&__links {
+		display: flex;
+		margin-top: 38px;
+	}
+	&__link {
+		& + .features__link {
+			margin-left: 60px;
+		}
+	}
+}
