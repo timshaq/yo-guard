@@ -93,6 +93,9 @@
 		}
 		&:last-child {
 			background-color: var(--orange);
+			&:hover {
+				background-color: var(--orange-dark);
+			}
 		}
 	}
 }

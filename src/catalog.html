@@ -7,7 +7,13 @@
 @@include('assets/html/breadscrumb.html')
 
 <section class="catalog">
-	<div class="catalog__fix-box fix-box">
+	<div class="catalog__title-box page-title-box fix-box">
+		<h1 class="catalog__title page-title">
+			Каталог свободных помещений
+		</h1>
+	</div>
+
+	<div class="catalog__container fix-box">
 		<aside class="catalog__filter-box">
 
 			<form class="catalog__filter catalog-filter">
@@ -63,6 +69,41 @@
 					</div>
 				</fieldset>
 				
+				<fieldset class="catalog-filter__fieldset">
+					<span class="catalog-filter__name">
+						Назначение
+					</span>
+					<div class="catalog-filter__fieldset-list">
+						<label>
+							<input type="checkbox">
+							<div></div>
+							<span>
+								1
+							</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<div></div>
+							<span>
+								2
+							</span>
+						</label>
+						<label>
+							<input type="checkbox">
+							<div></div>
+							<span>
+								3
+							</span>
+						</label>
+					</div>
+				</fieldset>
+
+				<div class="catalog-filter__submit-box">
+					<button type="submit" class="catalog-filter__submit btn btn-blue">
+						Показать
+					</button>
+				</div>
+				
 			</form>
 			
 		</aside>
@@ -81,18 +122,18 @@
 
 						<div class="card-header__props">
 
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
 									Дмитровская
 								</span>
 							</div>
 
 							<div class="card-header__space">
-								<div class="card-header__square">
+								<div class="card-header__square card-label-square">
 									460 м²
 								</div>
-								<div class="card-header__rooms">
+								<div class="card-header__rooms card-label-rooms">
 									2 комнаты
 								</div>
 							</div>
@@ -104,14 +145,14 @@
 					<div class="card__body card-body">
 
 						<div class="card__text card-text">
-							<div class="card-text__name">
+							<div class="card-text__name card-name">
 								Офисное помещение
 							</div>
 							<div class="card-text__price-box">
-								<span class="card-text__price">
+								<span class="card-text__price card-price">
 									120.000 ₽
 								</span>
-								<span class="card-text__period">
+								<span class="card-text__period card-period">
 									/ месяц
 								</span>
 							</div>
@@ -140,313 +181,18 @@
 
 						<div class="card-header__props">
 
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Щелковская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									120 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Офисное помещение и конференц зал
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									86.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Чеховская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									50 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Помещение под кухню для офиса
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									54.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Бауманская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									158 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Офисное помещение и конференц зал
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									118.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Чеховская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									50 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Помещение под кухню для офиса
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									72.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Бауманская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									158 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Офисное помещение и конференц зал
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									215.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
 									Дмитровская
 								</span>
 							</div>
 
 							<div class="card-header__space">
-								<div class="card-header__square">
+								<div class="card-header__square card-label-square">
 									460 м²
 								</div>
-								<div class="card-header__rooms">
+								<div class="card-header__rooms card-label-rooms">
 									2 комнаты
 								</div>
 							</div>
@@ -458,14 +204,14 @@
 					<div class="card__body card-body">
 
 						<div class="card__text card-text">
-							<div class="card-text__name">
+							<div class="card-text__name card-name">
 								Офисное помещение
 							</div>
 							<div class="card-text__price-box">
-								<span class="card-text__price">
-									116.000 ₽
+								<span class="card-text__price card-price">
+									120.000 ₽
 								</span>
-								<span class="card-text__period">
+								<span class="card-text__period card-period">
 									/ месяц
 								</span>
 							</div>
@@ -494,195 +240,18 @@
 
 						<div class="card-header__props">
 
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Щелковская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									120 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Офисное помещение и конференц зал
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									86.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Чеховская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									50 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Помещение под кухню для офиса
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									72.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Бауманская
-								</span>
-							</div>
-
-							<div class="card-header__space">
-								<div class="card-header__square">
-									158 м²
-								</div>
-								<div class="card-header__rooms">
-									1 комната
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="card__body card-body">
-
-						<div class="card__text card-text">
-							<div class="card-text__name">
-								Офисное помещение и конференц зал
-							</div>
-							<div class="card-text__price-box">
-								<span class="card-text__price">
-									215.000 ₽
-								</span>
-								<span class="card-text__period">
-									/ месяц
-								</span>
-							</div>
-						</div>
-
-						<div class="card__controls card-controls">
-							<button class="card-controls__booking">
-								Забронировать
-							</button>
-							<button class="card-controls__about">
-								Подробнее
-							</button>
-						</div>
-
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card__header card-header">
-
-						<div class="card-header__ph-box">
-							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
-							<div class="card-header__ph-shadow"></div>
-						</div>
-
-
-						<div class="card-header__props">
-
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
 									Дмитровская
 								</span>
 							</div>
 
 							<div class="card-header__space">
-								<div class="card-header__square">
+								<div class="card-header__square card-label-square">
 									460 м²
 								</div>
-								<div class="card-header__rooms">
+								<div class="card-header__rooms card-label-rooms">
 									2 комнаты
 								</div>
 							</div>
@@ -694,14 +263,14 @@
 					<div class="card__body card-body">
 
 						<div class="card__text card-text">
-							<div class="card-text__name">
+							<div class="card-text__name card-name">
 								Офисное помещение
 							</div>
 							<div class="card-text__price-box">
-								<span class="card-text__price">
-									116.000 ₽
+								<span class="card-text__price card-price">
+									120.000 ₽
 								</span>
-								<span class="card-text__period">
+								<span class="card-text__period card-period">
 									/ месяц
 								</span>
 							</div>
@@ -730,19 +299,19 @@
 
 						<div class="card-header__props">
 
-							<div class="card-header__location">
-								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon">
-								<span class="card-header__location-name">
-									Щелковская
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
 								</span>
 							</div>
 
 							<div class="card-header__space">
-								<div class="card-header__square">
-									120 м²
+								<div class="card-header__square card-label-square">
+									460 м²
 								</div>
-								<div class="card-header__rooms">
-									1 комната
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
 								</div>
 							</div>
 
@@ -753,14 +322,486 @@
 					<div class="card__body card-body">
 
 						<div class="card__text card-text">
-							<div class="card-text__name">
-								Офисное помещение и конференц зал
+							<div class="card-text__name card-name">
+								Офисное помещение
 							</div>
 							<div class="card-text__price-box">
-								<span class="card-text__price">
-									86.000 ₽
+								<span class="card-text__price card-price">
+									120.000 ₽
 								</span>
-								<span class="card-text__period">
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
+									/ месяц
+								</span>
+							</div>
+						</div>
+
+						<div class="card__controls card-controls">
+							<button class="card-controls__booking">
+								Забронировать
+							</button>
+							<button class="card-controls__about">
+								Подробнее
+							</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card__header card-header">
+
+						<div class="card-header__ph-box">
+							<img src="assets/img/card-ph.png" alt="" class="card-header__ph">
+							<div class="card-header__ph-shadow"></div>
+						</div>
+
+
+						<div class="card-header__props">
+
+							<div class="card-header__location card-label-location">
+								<img src="assets/img/m-icon.svg" alt="" class="card-header__location-icon card-label-location__icon">
+								<span class="card-header__location-name card-label-location__name">
+									Дмитровская
+								</span>
+							</div>
+
+							<div class="card-header__space">
+								<div class="card-header__square card-label-square">
+									460 м²
+								</div>
+								<div class="card-header__rooms card-label-rooms">
+									2 комнаты
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="card__body card-body">
+
+						<div class="card__text card-text">
+							<div class="card-text__name card-name">
+								Офисное помещение
+							</div>
+							<div class="card-text__price-box">
+								<span class="card-text__price card-price">
+									120.000 ₽
+								</span>
+								<span class="card-text__period card-period">
 									/ месяц
 								</span>
 							</div>

@@ -1,5 +1,8 @@
 .catalog {
-	&__fix-box {
+	&__title-box {
+		
+	}
+	&__container {
 		display: flex;
 		justify-content: space-between;
 	}
@@ -23,6 +26,11 @@
 	border-radius: 5px;
 	border: 1px solid var(--border);
 	&__fieldset {
+		padding-bottom: 25px;
+		& + .catalog-filter__fieldset {
+			padding-top: 25px;
+			border-top: 1px solid var(--border)
+		}
 	}
 	&__name {
 		margin-bottom: 16px;
@@ -35,6 +43,7 @@
 		& label {
 			display: flex;
 			align-items: flex-start;
+			cursor: pointer;
 			&:hover {
 				& input {
 					& + div {
@@ -85,6 +94,14 @@
 				}
 			}
 		}
+	}
+	&__submit-box {
+		display: flex;
+		justify-content: center;
+		padding-top: 5px;
+	}
+	&__submit {
+		width: 225px;
 	}
 }
 

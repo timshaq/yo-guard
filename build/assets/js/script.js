@@ -243,14 +243,28 @@
 
   /******/
 
-  return __webpack_require__(__webpack_require__.s = "./src/assets/js/script.js");
+  return __webpack_require__(__webpack_require__.s = 0);
   /******/
 })({
   /***/
-  "./src/assets/js/script.js": function (module, exports, __webpack_require__) {
+  "./src/assets/js/script.js": function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("\r\n\r\n// import sliders from './sliders.js';\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\t// sliders();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    /***/
+  },
+
+  /***/
+  "./src/assets/js/sliders.js": function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst bannersSlider = new Swiper('#banners-slider', {\r\n\t\tnavigation: {\r\n\t\t\tprevEl: '#banners-slider-nav-prev',\r\n\t\t\tnextEl: '#banners-slider-nav-next',\r\n\t\t\tdisabledClass: 'disable',\r\n\t\t},\r\n\t\tslidesPerView: 1,\r\n\t\tspaceBetween: 10,\r\n\t\tloop: true,\r\n\t\tdisabledClass: 'nav-disable'\r\n\r\n\t})\r\n\r\n\tconst featuresSlider = new Swiper('#features-slider', {\r\n\t\tnavigation: {\r\n\t\t\tprevEl: '#features-slider-nav-prev',\r\n\t\t\tnextEl: '#features-slider-nav-next',\r\n\t\t\tdisabledClass: 'disable',\r\n\t\t},\r\n\t\tslidesPerView: 1,\r\n\t\tspaceBetween: 10,\r\n\t\tloop: true,\r\n\t\tautoplay: {\r\n\t\t\tdelay: 3000,\r\n\t\t},\r\n\t\teffect: 'fade',\r\n\t\tfadeEffect: {\r\n\t\t\tcrossFade: true\r\n\t\t},\r\n\t\tdisabledClass: 'nav-disable'\r\n\r\n\t})\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/sliders.js?");
+    /***/
+  },
+
+  /***/
+  0: function (module, exports, __webpack_require__) {
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/script.js_./src/assets/js/sliders.js?");
     /***/
   }
   /******/

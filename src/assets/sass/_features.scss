@@ -4,8 +4,13 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	&__slider {
+	&__slider-box {
+		position: relative;
 		width: 390px;
+		height: auto;
+	}
+	&__slider {
+		height: 100%;
 	}
 	&__text {
 		width: 780px;
@@ -22,6 +27,20 @@
 	&__link {
 		& + .features__link {
 			margin-left: 60px;
+		}
+	}
+	&__slide {
+		height: auto;
+		height: 100%;
+	}
+	& .slider__nav {
+		&_prev {
+			left: 30px;
+			transform: translate(0,-50%);
+		}
+		&_next {
+			left: 90px;
+			transform: translate(0,-50%);
 		}
 	}
 }
