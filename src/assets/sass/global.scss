@@ -9,6 +9,7 @@ $xs: 576px;
     --black: rgba(0, 0, 0, 1);
     --blue: rgba(36, 50, 133, 1);
     --blue2: rgba(26, 33, 75, 1);
+    --blue3: rgba(63, 75, 148, 1);
     --blue-dark: rgba(0, 0, 101, 1);
     --blue-dark2: rgba(20, 26, 62, 1);
     --blue-light: rgba(126, 131, 166, 1);
@@ -19,7 +20,10 @@ $xs: 576px;
     --orange-dark: rgba(231, 77, 12, 1);
     --gray: rgba(182, 183, 187, 1);
     --gray2: rgba(153, 153, 153, 1);
+    --gray3: rgba(92, 94, 105, 1);
     --border: rgba(234, 236, 249, 1);
+    --green: rgba(29, 176, 26, 1);
+    --glass: rgba(234, 236, 249, .25);
 }
 
 * {
@@ -105,6 +109,14 @@ p {
             color: var(--white);
         }
     }
+    &.btn-orange {
+        background-color: var(--orange);
+        color: var(--white);
+        &:hover {
+            background-color: var(--orange-dark);
+            color: var(--white);
+        }
+    }
 }
 
 
@@ -142,4 +154,11 @@ p {
     font-weight: 800;
     font-size: 40px;
     line-height: 40px;
+}
+img.swiper-slide {
+    pointer-events: auto;
+}
+#lg-counter,
+#lg-counter * {
+    color: var(--white);
 }

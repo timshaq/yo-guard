@@ -5,6 +5,7 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		position: relative;
 	}
 	&__filter-box {
 		width: 285px;
@@ -62,6 +63,8 @@
 				& + div {
 					width: 16px;
 					height: 16px;
+					min-width: 16px;
+					min-height: 16px;
 					border-radius: 2px;
 					background: var(--white);
 					border: 1px solid var(--border);
@@ -80,7 +83,10 @@
 						margin-left: 10px;
 						font-weight: 500;
 						font-size: 14px;
-						line-height: 30px
+						line-height: 30px;
+						& span {
+							color: var(--gray);
+						}
 					}
 				}
 				&:checked {

@@ -33,5 +33,31 @@ export default function () {
 
 	})
 
+    const productPageThumbNail = new Swiper("#productPageThumbNail", {
+        spaceBetween: 15,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+    });
+
+    const productPageLarge = new Swiper("#productPageLarge", {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: productPageThumbNail,
+        },
+    });
+
+	const galleryEl = document.getElementById('lightgallery');
+
+	if(!galleryEl) return;
+
+	lightGallery(galleryEl, {
+		download: false,
+		thumbnail: true,
+		speed: 400,
+		mousewheel: true,
+	})
 
 }
