@@ -1,0 +1,89 @@
+@@include('assets/html/header.html', {
+	"title": "Контакты"
+})
+
+<main>
+
+@@include('assets/html/breadscrumb.html')
+
+<section class="contacts">
+	<div class="page-title-box fix-box">
+		<h1 class="page-title">
+			Контакты
+		</h1>
+	</div>
+
+	<div class="contacts__map-box">
+
+		<div class="contacts__card-box fix-box">
+			
+			<div class="contacts__map-card contacts-map-card">
+				
+				<div class="contacts-map-card__item">
+					<img src="assets/img/icon__geo.svg" alt="" class="contacts-map-card__item-icon">
+					<div class="contacts-map-card__item-text">
+						<div class="contacts-map-card__item-name">
+							Адрес офиса
+						</div>
+						<span class="contacts-map-card__item-value">
+							г. Москва, Звездный бульвар 21, срт.1, офис 512
+						</span>
+					</div>
+				</div>
+				
+				<div class="contacts-map-card__item">
+					<img src="assets/img/icon__alarm.svg" alt="" class="contacts-map-card__item-icon">
+					<div class="contacts-map-card__item-text">
+						<div class="contacts-map-card__item-name">
+							График работы
+						</div>
+						<span class="contacts-map-card__item-value">
+							Пн. - Пт. 10:00 - 20:00
+						</span>
+					</div>
+				</div>
+				
+				<div class="contacts-map-card__item">
+					<img src="assets/img/icon__tel.svg" alt="" class="contacts-map-card__item-icon">
+					<div class="contacts-map-card__item-text">
+						<div class="contacts-map-card__item-name">
+							Телефоны
+						</div>
+						<a href="tel:+77771234567" class="contacts-map-card__item-value">
+							+7 (777) 123-45-67
+						</a>
+					</div>
+				</div>
+				
+				<div class="contacts-map-card__item">
+					<img src="assets/img/icon__mail.svg" alt="" class="contacts-map-card__item-icon">
+					<div class="contacts-map-card__item-text">
+						<div class="contacts-map-card__item-name">
+							Почта
+						</div>
+						<a href="mailto:soloviev.gvardiya@gmail.com" class="contacts-map-card__item-value">
+							soloviev.gvardiya@gmail.com
+						</a>
+					</div>
+				</div>
+
+				<button class="contacts-map-card__btn btn btn-blue">
+					Связаться c нами
+				</button>
+
+			</div>
+			
+		</div>
+
+		<div class="contacts__map">
+			<!-- Удалить при добавлении карты -->
+			<img style="width: 100%;height: 100%;object-fit: cover;object-position: center center;" src="assets/img/map.png" alt="">
+			<!-- Удалить при добавлении карты -->
+		</div>
+
+	</div>
+</section>
+
+</main>
+
+@@include('assets/html/footer.html')

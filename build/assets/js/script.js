@@ -247,10 +247,18 @@
   /******/
 })({
   /***/
+  "./src/assets/js/about.js": function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst tabsNL = document.querySelectorAll('.about__tab-box .about__tab');\r\n\tconst tabs = Array.prototype.slice.call(tabsNL);\r\n\r\n\tif(!tabs.length) return;\r\n\r\n\tconst ACTIVE_CLASS = 'active';\r\n\r\n\tconst itemsNL = document.querySelectorAll('.about__content .about__content-item');\r\n\tconst items = Array.prototype.slice.call(itemsNL);\r\n\r\n\ttabs.forEach((tab,i) => {\r\n\t\ttab.addEventListener('click', function() {\r\n\t\t\tif(tab.classList.contains(ACTIVE_CLASS)) return;\r\n\t\t\titems.forEach(item => item.classList.remove(ACTIVE_CLASS))\r\n\t\t\ttabs.forEach(item => item.classList.remove(ACTIVE_CLASS))\r\n\t\t\titems[i].classList.add(ACTIVE_CLASS)\r\n\t\t\ttab.classList.add(ACTIVE_CLASS)\r\n\t\t})\r\n\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/about.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/script.js": function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./about.js */ \"./src/assets/js/about.js\");\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_about_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -264,7 +272,7 @@
 
   /***/
   0: function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/script.js_./src/assets/js/sliders.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\about.js */\"./src/assets/js/about.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/about.js_./src/assets/js/script.js_./src/assets/js/sliders.js?");
     /***/
   }
   /******/
