@@ -6,10 +6,22 @@ export default function () {
 			nextEl: '#banners-slider-nav-next',
 			disabledClass: 'disable',
 		},
-		slidesPerView: 1,
-		spaceBetween: 10,
 		loop: true,
-		disabledClass: 'nav-disable'
+		disabledClass: 'nav-disable',
+		breakpoints: {
+			0: {
+				pagination: {
+					el: '#banners-slider-pagination',
+					type: 'bullets',
+				},
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			992: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+		}
 
 	})
 
@@ -34,12 +46,26 @@ export default function () {
 	})
 
     const productPageThumbNail = new Swiper("#productPageThumbNail", {
-        spaceBetween: 15,
-        slidesPerView: 3,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        direction: 'vertical',
+    	breakpoints: {
+    		0: {
+		        spaceBetween: 15,
+		        slidesPerView: 2,
+        		direction: 'horizontal',
+    		},
+    		576: {
+		        spaceBetween: 15,
+		        slidesPerView: 3,
+        		direction: 'horizontal',
+    		},
+    		1366: {
+		        spaceBetween: 15,
+		        slidesPerView: 3,
+        		direction: 'vertical',
+    		},
+    	}
     });
 
     const productPageLarge = new Swiper("#productPageLarge", {

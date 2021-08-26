@@ -75,22 +75,34 @@
 				</button>
 			</div>
 
-			<nav class="header__nav header-nav">
-				<a href="#">
-					Помещения в аренду
-				</a>
-				<a href="#">
-					Услуги в БЦ
-				</a>
-				<a href="#">
-					Полезная информация
-				</a>
-				<a href="#">
-					Контакты
-				</a>
-				<a href="#">
-					Личный кабинет
-				</a>
+			<nav class="header__nav-box">
+				<ul class="header__nav header-nav">
+					<li>
+						<a href="#">
+							Помещения в аренду
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Услуги в БЦ
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Полезная информация
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Контакты
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Личный кабинет
+						</a>
+					</li>
+				</ul>
 			</nav>
 
 		</div>
@@ -111,11 +123,24 @@
 	</li>
 </ul>
 
+<div class="padding-box">
+	
+
 <section class="catalog">
 	<div class="catalog__title-box page-title-box fix-box">
 		<h1 class="catalog__title page-title">
 			Наши услуги
 		</h1>
+	</div>
+	
+	<div class="catalog__controls fix-box">
+		<button class="catalog__filter-btn" id="filter-btn">
+				Открыть фильтр
+			<svg class="catalog__filter-icon" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M21 1H1L9 10.46V17L13 19V10.46L21 1Z" stroke="#21316A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+
+		</button>
 	</div>
 
 	<div class="catalog__container fix-box">
@@ -192,9 +217,9 @@
 		</aside>
 		<div class="catalog__content">
 
-			<div class="catalog__cards grid">
+			<ul class="catalog__cards grid">
 				
-				<div class="row-card advise">
+				<li class="row-card advise">
 
 					<img src="assets/img/advise-icon.svg" alt="" class="row-card__advise-icon">
 
@@ -232,9 +257,9 @@
 								IT-CAMP
 							</a>
 						</div>
-						<div class="row-card__p">
+						<p>
 							Предлагает комплексные услуги по обслуживанию компьютерной техники для юридических лиц. Абонетское обслуживание, экстренные выезды, разовые и проектные работы.
-						</div>
+						</p>
 						<div class="row-card__more-box">
 							<a href="#" class="row-card__more btn btn-orange">
 								Подробнее
@@ -243,9 +268,9 @@
 					</div>
 
 					
-				</div>
+				</li>
 				
-				<div class="row-card">
+				<li class="row-card">
 
 					<div class="row-card__ph-box">
 						<img src="assets/img/service-ph__02.png" alt="" class="row-card__ph">
@@ -281,9 +306,9 @@
 								IT-CAMP
 							</a>
 						</div>
-						<div class="row-card__p">
+						<p>
 							Предлагает комплексные услуги по обслуживанию компьютерной техники для юридических лиц. Абонетское обслуживание, экстренные выезды, разовые и проектные работы.
-						</div>
+						</p>
 						<div class="row-card__more-box">
 							<a href="#" class="row-card__more btn btn-orange">
 								Подробнее
@@ -292,9 +317,9 @@
 					</div>
 
 					
-				</div>
+				</li>
 				
-				<div class="row-card">
+				<li class="row-card">
 
 					<div class="row-card__ph-box">
 						<img src="assets/img/service-ph__03.png" alt="" class="row-card__ph">
@@ -330,9 +355,9 @@
 								IT-CAMP
 							</a>
 						</div>
-						<div class="row-card__p">
+						<p>
 							Предлагает комплексные услуги по обслуживанию компьютерной техники для юридических лиц. Абонетское обслуживание, экстренные выезды, разовые и проектные работы.
-						</div>
+						</p>
 						<div class="row-card__more-box">
 							<a href="#" class="row-card__more btn btn-orange">
 								Подробнее
@@ -341,9 +366,9 @@
 					</div>
 
 					
-				</div>
+				</li>
 				
-				<div class="row-card">
+				<li class="row-card">
 
 					<div class="row-card__ph-box">
 						<img src="assets/img/service-ph__04.png" alt="" class="row-card__ph">
@@ -379,9 +404,9 @@
 								IT-CAMP
 							</a>
 						</div>
-						<div class="row-card__p">
+						<p>
 							Предлагает комплексные услуги по обслуживанию компьютерной техники для юридических лиц. Абонетское обслуживание, экстренные выезды, разовые и проектные работы.
-						</div>
+						</p>
 						<div class="row-card__more-box">
 							<a href="#" class="row-card__more btn btn-orange">
 								Подробнее
@@ -390,9 +415,9 @@
 					</div>
 
 					
-				</div>
+				</li>
 				
-				<div class="row-card">
+				<li class="row-card">
 
 					<div class="row-card__ph-box">
 						<img src="assets/img/service-ph__05.png" alt="" class="row-card__ph">
@@ -428,9 +453,9 @@
 								IT-CAMP
 							</a>
 						</div>
-						<div class="row-card__p">
+						<p>
 							Предлагает комплексные услуги по обслуживанию компьютерной техники для юридических лиц. Абонетское обслуживание, экстренные выезды, разовые и проектные работы.
-						</div>
+						</p>
 						<div class="row-card__more-box">
 							<a href="#" class="row-card__more btn btn-orange">
 								Подробнее
@@ -439,9 +464,9 @@
 					</div>
 
 					
-				</div>
+				</li>
 				
-				<div class="row-card">
+				<li class="row-card">
 
 					<div class="row-card__ph-box">
 						<img src="assets/img/service-ph__06.png" alt="" class="row-card__ph">
@@ -477,9 +502,9 @@
 								IT-CAMP
 							</a>
 						</div>
-						<div class="row-card__p">
+						<p>
 							Предлагает комплексные услуги по обслуживанию компьютерной техники для юридических лиц. Абонетское обслуживание, экстренные выезды, разовые и проектные работы.
-						</div>
+						</p>
 						<div class="row-card__more-box">
 							<a href="#" class="row-card__more btn btn-orange">
 								Подробнее
@@ -488,9 +513,9 @@
 					</div>
 
 					
-				</div>
+				</li>
 
-			</div>
+			</ul>
 
 			<div class="catalog__pagination catalog-pagination">
 				<div class="catalog-pagination__controls">
@@ -542,6 +567,44 @@
 	</div>
 </section>
 
+</div>
+
+<div class="padding-box">
+	
+<section class="business-environment">
+	<div class="business-environment__bg-wrapper">
+		<div class="business-environment__fix-box fix-box">
+			
+			<div class="business-environment__ph-box">
+				<img src="assets/img/business-environment__ph.png" alt="" class="business-environment__ph">
+			</div>
+			<div class="business-environment__bg-box">
+				<div class="business-environment__bg-mask"></div>
+				<img src="assets/img/business-environment__bg.png" alt="" class="business-environment__bg">
+			</div>
+
+			<div class="business-environment__text">
+				<h2>
+					Единая среда для бизнеса
+				</h2>
+				<p>
+					Бизнес-процессы в России и процессное управление в целом не всегда понимают правильно. Это не просто дробление работы на ряд отдельных операций. В определениях процесса обычно хорошо улавливают первую часть — про последовательность действий сотрудников. Но часто упускают вторую — о результате работы и его ценности для потребителя. Пожалуй, это самая частая ошибка.
+					<br><br>
+					Простой пример — продажа товара. Какие основные стадии проходит этот процесс? Менеджер приводит клиента, бухгалтерия готовит документы, на складе формируют заказ. Если отправку груза откладывают, пока машина не будет полностью укомплектована, как расценивать эту ситуацию?
+				</p>
+
+				<div class="business-environment__link-box">
+					<a href="#" class="business-environment__link btn btn-white">
+						Подробнее
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</div>
+
 </main>
 
 <footer class="footer">
@@ -559,9 +622,7 @@
 							Адрес офиса
 						</span>
 						<a href="https://yandex.ru/maps/-/CCUiyXVWLC" class="footer-contacts-item__value">
-							Звездный бульвар 21,
-							<br>
-							стр. 1, оф. 512
+							Звездный бульвар 21, стр.&nbsp;1, оф. 512
 						</a>
 					</div>
 				</div>

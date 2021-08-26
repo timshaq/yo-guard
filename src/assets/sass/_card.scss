@@ -293,6 +293,10 @@
 	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
+	flex-direction: column;
+	@media (min-width: $md) {
+		flex-direction: row;
+	}
 	&__advise-icon {
 		display: none;
 	}
@@ -305,8 +309,13 @@
 			height: 13px;
 			object-fit: contain;
 			position: absolute;
-			top: 13px;
-			right: 13px;
+			bottom: 30px;
+			right: 30px;
+			@media (min-width: $md) {
+				bottom: auto;
+				top: 13px;
+				right: 13px;
+			}
 		}
 
 	}
@@ -328,12 +337,16 @@
 		}
 	}
 	&__ph-box {
-		min-width: 285px;
-		width: 285px;
-		min-height: 240px;
-		height: 100%;
+		width: 100%;
+		height: 300px;
 		position: relative;
 		display: flex;
+		@media (min-width: $md) {
+			min-width: 285px;
+			width: 285px;
+			min-height: 240px;
+			height: 100%;
+		}
 	}
 	&__ph {
 		width: 100%;
@@ -403,7 +416,7 @@
 		line-height: 17px;
 		color: var(--blue3);
 	}
-	&__p {
+	& p {
 		color: var(--gray3);
 		font-weight: 500;
 		font-size: 14px;

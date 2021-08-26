@@ -1,5 +1,5 @@
 .features {
-	padding: 120px 0;
+	padding-bottom: 70px;
 	&__fix-box {
 		display: flex;
 		flex-direction: column;
@@ -51,14 +51,14 @@
 			width: 780px;
 		}
 	}
-	&__title {
+	& h2, h3, h4, h5, h6 {
 		margin-bottom: 22px;
 		text-align: center;
 		@media (min-width: $lg) {
 			text-align: start;
 		}
 	}
-	&__p {
+	& p {
 		text-align: center;
 		@media (min-width: $lg) {
 			text-align: start;

@@ -1,17 +1,59 @@
 .card-page {
+	padding-bottom: 70px;
 	&__container {
 		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		@media (min-width: $lg) {
+			
+		}
+		@media (min-width: $xl) {
+			flex-direction: row;
+			align-items: flex-start;
+			
+		}
+		@media (min-width: $xxl) {
+			flex-direction: row;
 		justify-content: space-between;
+			
+		}
 	}
 	&__slider {
+		width: 100%;
+		@media (min-width: $xs) {
+			width: 495px;
+		}
+		@media (min-width: $xl) {
+		}
+		@media (min-width: $xxl) {
+			width: 705px;
+			
+		}
 	}
 	&__about {
-		width: 495px;
+		width: 100%;
+		margin-top: 30px;
+		@media (min-width: $xs) {
+			width: 495px;
+		}
+		@media (min-width: $xl) {
+			width: 495px;
+			margin-left: 30px;
+			margin-top: 0;
+			
+		}
+		@media (min-width: $xxl) {
+			width: 495px;
+			margin-left: 0;
+			
+		}
 	}
 }
 .card-page-about {
 	border-radius: 5px;
 	border: 1px solid var(--border);
+	height: fit-content;
 	&__header {
 		border-bottom: 1px solid var(--border);
 		padding-top: 24px;
@@ -49,7 +91,7 @@
 	&__props-value {
 		color: var(--blue3)
 	}
-	&__p {
+	& p {
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 22px;
@@ -67,18 +109,47 @@
 .card-page-slider {
 	display: flex;
 	justify-content: space-between;
-	width: 705px;
+	flex-direction: column;
+	@media (min-width: $xl) {
+	}
+	@media (min-width: $xxl) {
+		flex-direction: row;
+		
+	}
 	&__thumb {
-		width: 180px;
-		height: 346px;
+		width: 100%;
+		height: 110px;
+		order: 2;
+		margin-top: 30px;
+		margin-left: 0;
+		@media (min-width: $xs) {
+			width: 495px;
+		}
+		@media (min-width: $xxl) {
+			width: 180px;
+			height: 346px;
+			margin-top: 0;
+			order: 0;
+			margin-left: auto;
+			
+		}
 		& .swiper-slide {
 			border-radius: 5px;
 			overflow: hidden;
 		}
 	}
 	&__lg {
-		width: 495px;
-		height: 346px;
+		width: 100%;
+		height: 300px;
+		margin-left: 0;
+		@media (min-width: $xs) {
+			width: 495px;
+			height: 346px;
+		}
+		@media (min-width: $xxl) {
+			margin-left: auto;
+			
+		}
 	}
 }
 .card-page-slide {

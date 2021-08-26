@@ -88,7 +88,7 @@
 			width: 705px;
 		}
 	}
-	&__title {
+	& h1, h2, h3, h4, h5, h6 {
 		color: var(--white);
 		margin-bottom: 25px;
 		text-align: center;
@@ -96,7 +96,7 @@
 			text-align: start;
 		}
 	}
-	&__p {
+	& p {
 		color: var(--white);
 		text-align: center;
 		@media(min-width: $xs) {

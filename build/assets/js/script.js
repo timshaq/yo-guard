@@ -1,125 +1,288 @@
-!function (e) {
-  var t = {};
+/******/
+(function (modules) {
+  // webpackBootstrap
 
-  function n(r) {
-    if (t[r]) return t[r].exports;
-    var a = t[r] = {
-      i: r,
-      l: !1,
+  /******/
+  // The module cache
+
+  /******/
+  var installedModules = {};
+  /******/
+
+  /******/
+  // The require function
+
+  /******/
+
+  function __webpack_require__(moduleId) {
+    /******/
+
+    /******/
+    // Check if module is in cache
+
+    /******/
+    if (installedModules[moduleId]) {
+      /******/
+      return installedModules[moduleId].exports;
+      /******/
+    }
+    /******/
+    // Create a new module (and put it into the cache)
+
+    /******/
+
+
+    var module = installedModules[moduleId] = {
+      /******/
+      i: moduleId,
+
+      /******/
+      l: false,
+
+      /******/
       exports: {}
+      /******/
+
     };
-    return e[r].call(a.exports, a, a.exports, n), a.l = !0, a.exports;
+    /******/
+
+    /******/
+    // Execute the module function
+
+    /******/
+
+    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+    /******/
+
+    /******/
+    // Flag the module as loaded
+
+    /******/
+
+    module.l = true;
+    /******/
+
+    /******/
+    // Return the exports of the module
+
+    /******/
+
+    return module.exports;
+    /******/
   }
+  /******/
 
-  n.m = e, n.c = t, n.d = function (e, t, r) {
-    n.o(e, t) || Object.defineProperty(e, t, {
-      enumerable: !0,
-      get: r
-    });
-  }, n.r = function (e) {
-    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-      value: "Module"
-    }), Object.defineProperty(e, "__esModule", {
-      value: !0
-    });
-  }, n.t = function (e, t) {
-    if (1 & t && (e = n(e)), 8 & t) return e;
-    if (4 & t && "object" == typeof e && e && e.__esModule) return e;
-    var r = Object.create(null);
-    if (n.r(r), Object.defineProperty(r, "default", {
-      enumerable: !0,
-      value: e
-    }), 2 & t && "string" != typeof e) for (var a in e) n.d(r, a, function (t) {
-      return e[t];
-    }.bind(null, a));
-    return r;
-  }, n.n = function (e) {
-    var t = e && e.__esModule ? function () {
-      return e.default;
-    } : function () {
-      return e;
-    };
-    return n.d(t, "a", t), t;
-  }, n.o = function (e, t) {
-    return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 2);
-}([function (e, t, n) {
-  "use strict";
+  /******/
 
-  n.r(t), t.default = function () {
-    const e = document.querySelectorAll(".about__tab-box .about__tab"),
-          t = Array.prototype.slice.call(e);
-    if (!t.length) return;
-    const n = document.querySelectorAll(".about__content .about__content-item"),
-          r = Array.prototype.slice.call(n);
-    t.forEach((e, n) => {
-      e.addEventListener("click", function () {
-        e.classList.contains("active") || (r.forEach(e => e.classList.remove("active")), t.forEach(e => e.classList.remove("active")), r[n].classList.add("active"), e.classList.add("active"));
+  /******/
+  // expose the modules object (__webpack_modules__)
+
+  /******/
+
+
+  __webpack_require__.m = modules;
+  /******/
+
+  /******/
+  // expose the module cache
+
+  /******/
+
+  __webpack_require__.c = installedModules;
+  /******/
+
+  /******/
+  // define getter function for harmony exports
+
+  /******/
+
+  __webpack_require__.d = function (exports, name, getter) {
+    /******/
+    if (!__webpack_require__.o(exports, name)) {
+      /******/
+      Object.defineProperty(exports, name, {
+        enumerable: true,
+        get: getter
       });
-    });
-  };
-}, function (e, t, n) {
-  "use strict";
+      /******/
+    }
+    /******/
 
-  n.r(t), t.default = function () {
-    new Swiper("#banners-slider", {
-      navigation: {
-        prevEl: "#banners-slider-nav-prev",
-        nextEl: "#banners-slider-nav-next",
-        disabledClass: "disable"
-      },
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: !0,
-      disabledClass: "nav-disable"
-    }), new Swiper("#features-slider", {
-      navigation: {
-        prevEl: "#features-slider-nav-prev",
-        nextEl: "#features-slider-nav-next",
-        disabledClass: "disable"
-      },
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: !0,
-      autoplay: {
-        delay: 3e3
-      },
-      effect: "fade",
-      fadeEffect: {
-        crossFade: !0
-      },
-      disabledClass: "nav-disable"
-    });
-    const e = new Swiper("#productPageThumbNail", {
-      spaceBetween: 15,
-      slidesPerView: 3,
-      freeMode: !0,
-      watchSlidesVisibility: !0,
-      watchSlidesProgress: !0,
-      direction: "vertical"
-    }),
-          t = (new Swiper("#productPageLarge", {
-      spaceBetween: 10,
-      thumbs: {
-        swiper: e
-      }
-    }), document.getElementById("lightgallery"));
-    t && lightGallery(t, {
-      download: !1,
-      thumbnail: !0,
-      speed: 400,
-      mousewheel: !0
-    });
   };
-}, function (e, t, n) {
-  n(0), n(3), e.exports = n(1);
-}, function (e, t, n) {
-  "use strict";
+  /******/
 
-  n.r(t);
-  var r = n(1),
-      a = n(0);
-  document.addEventListener("DOMContentLoaded", function () {
-    Object(r.default)(), Object(a.default)();
-  });
-}]);
+  /******/
+  // define __esModule on exports
+
+  /******/
+
+
+  __webpack_require__.r = function (exports) {
+    /******/
+    if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+      /******/
+      Object.defineProperty(exports, Symbol.toStringTag, {
+        value: 'Module'
+      });
+      /******/
+    }
+    /******/
+
+
+    Object.defineProperty(exports, '__esModule', {
+      value: true
+    });
+    /******/
+  };
+  /******/
+
+  /******/
+  // create a fake namespace object
+
+  /******/
+  // mode & 1: value is a module id, require it
+
+  /******/
+  // mode & 2: merge all properties of value into the ns
+
+  /******/
+  // mode & 4: return value when already ns object
+
+  /******/
+  // mode & 8|1: behave like require
+
+  /******/
+
+
+  __webpack_require__.t = function (value, mode) {
+    /******/
+    if (mode & 1) value = __webpack_require__(value);
+    /******/
+
+    if (mode & 8) return value;
+    /******/
+
+    if (mode & 4 && typeof value === 'object' && value && value.__esModule) return value;
+    /******/
+
+    var ns = Object.create(null);
+    /******/
+
+    __webpack_require__.r(ns);
+    /******/
+
+
+    Object.defineProperty(ns, 'default', {
+      enumerable: true,
+      value: value
+    });
+    /******/
+
+    if (mode & 2 && typeof value != 'string') for (var key in value) __webpack_require__.d(ns, key, function (key) {
+      return value[key];
+    }.bind(null, key));
+    /******/
+
+    return ns;
+    /******/
+  };
+  /******/
+
+  /******/
+  // getDefaultExport function for compatibility with non-harmony modules
+
+  /******/
+
+
+  __webpack_require__.n = function (module) {
+    /******/
+    var getter = module && module.__esModule ?
+    /******/
+    function getDefault() {
+      return module['default'];
+    } :
+    /******/
+    function getModuleExports() {
+      return module;
+    };
+    /******/
+
+    __webpack_require__.d(getter, 'a', getter);
+    /******/
+
+
+    return getter;
+    /******/
+  };
+  /******/
+
+  /******/
+  // Object.prototype.hasOwnProperty.call
+
+  /******/
+
+
+  __webpack_require__.o = function (object, property) {
+    return Object.prototype.hasOwnProperty.call(object, property);
+  };
+  /******/
+
+  /******/
+  // __webpack_public_path__
+
+  /******/
+
+
+  __webpack_require__.p = "";
+  /******/
+
+  /******/
+
+  /******/
+  // Load entry module and return exports
+
+  /******/
+
+  return __webpack_require__(__webpack_require__.s = 0);
+  /******/
+})({
+  /***/
+  "./src/assets/js/about.js": function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst tabsNL = document.querySelectorAll('.about__tab-box .about__tab');\r\n\tconst tabs = Array.prototype.slice.call(tabsNL);\r\n\r\n\tif(!tabs.length) return;\r\n\r\n\tconst ACTIVE_CLASS = 'active';\r\n\r\n\tconst itemsNL = document.querySelectorAll('.about__content .about__content-item');\r\n\tconst items = Array.prototype.slice.call(itemsNL);\r\n\r\n\ttabs.forEach((tab,i) => {\r\n\t\ttab.addEventListener('click', function() {\r\n\t\t\tif(tab.classList.contains(ACTIVE_CLASS)) return;\r\n\t\t\titems.forEach(item => item.classList.remove(ACTIVE_CLASS))\r\n\t\t\ttabs.forEach(item => item.classList.remove(ACTIVE_CLASS))\r\n\t\t\titems[i].classList.add(ACTIVE_CLASS)\r\n\t\t\ttab.classList.add(ACTIVE_CLASS)\r\n\t\t})\r\n\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/about.js?");
+    /***/
+  },
+
+  /***/
+  "./src/assets/js/adaptiveSliders.js": function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tfunction setAdaptiveSlider(el, match, config) {\r\n\r\n\t\tconst sliderEl = el;\r\n\t\tif(!sliderEl) return\r\n\r\n\t\tconst breakpointMob = window.matchMedia(`(min-width:${match}px)`)\r\n\r\n\t\tlet slider;\r\n\r\n\t\tconst enableSlider = function() {\r\n\t\t\tslider = new Swiper(sliderEl, config)\r\n\t\t}\r\n\r\n\t\tconst breakpointChecker = function() {\r\n\t\t\tif(breakpointMob.matches === true) {\r\n\t\t\t\tif(slider !== undefined) slider.destroy(true,true);\r\n\t\t\t\treturn;\r\n\t\t\t} else if (breakpointMob.matches === false) {\r\n\t\t\t\treturn enableSlider();\r\n\t\t\t}\r\n\t\t}\r\n\t\tbreakpointMob.addListener(breakpointChecker);\r\n\t\tbreakpointChecker();\r\n\t}\r\n\r\n\tconst vacantPremisesSlider = document.querySelector('#vacant-premises-slider')\r\n\r\n\tif(vacantPremisesSlider) {\r\n\t\tsetAdaptiveSlider(vacantPremisesSlider, 1200, {\r\n\t\t\t\tbreakpoints: {\r\n\t\t\t\t\t0: {\r\n\t\t\t\t\t\tslidesPerView: 1,\r\n\t\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t\t\tpagination: {\r\n\t\t\t\t\t\t\tel: '#vacant-premises-slider-pagination',\r\n\t\t\t\t\t\t\ttype: 'bullets',\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t},\r\n\t\t\t\t\t576: {\r\n\t\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t\t\tpagination: {\r\n\t\t\t\t\t\t\tel: '#vacant-premises-slider-pagination',\r\n\t\t\t\t\t\t\ttype: 'bullets',\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t},\r\n\t\t\t\t\t768: {\r\n\t\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t\t\tpagination: {\r\n\t\t\t\t\t\t\tel: '#vacant-premises-slider-pagination',\r\n\t\t\t\t\t\t\ttype: 'bullets',\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t},\r\n\t\t\t\t\t992: {\r\n\t\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t\t\tpagination: {\r\n\t\t\t\t\t\t\tel: '#vacant-premises-slider-pagination',\r\n\t\t\t\t\t\t\ttype: 'bullets',\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t})\r\n\t}\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/adaptiveSliders.js?");
+    /***/
+  },
+
+  /***/
+  "./src/assets/js/script.js": function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./adaptiveSliders.js */ \"./src/assets/js/adaptiveSliders.js\");\n/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.js */ \"./src/assets/js/about.js\");\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_about_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    /***/
+  },
+
+  /***/
+  "./src/assets/js/sliders.js": function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst bannersSlider = new Swiper('#banners-slider', {\r\n\t\tnavigation: {\r\n\t\t\tprevEl: '#banners-slider-nav-prev',\r\n\t\t\tnextEl: '#banners-slider-nav-next',\r\n\t\t\tdisabledClass: 'disable',\r\n\t\t},\r\n\t\tloop: true,\r\n\t\tdisabledClass: 'nav-disable',\r\n\t\tbreakpoints: {\r\n\t\t\t0: {\r\n\t\t\t\tpagination: {\r\n\t\t\t\t\tel: '#banners-slider-pagination',\r\n\t\t\t\t\ttype: 'bullets',\r\n\t\t\t\t},\r\n\t\t\t\tslidesPerView: 1,\r\n\t\t\t\tspaceBetween: 10,\r\n\t\t\t},\r\n\t\t\t992: {\r\n\t\t\t\tslidesPerView: 1,\r\n\t\t\t\tspaceBetween: 10,\r\n\t\t\t},\r\n\t\t}\r\n\r\n\t})\r\n\r\n\tconst featuresSlider = new Swiper('#features-slider', {\r\n\t\tnavigation: {\r\n\t\t\tprevEl: '#features-slider-nav-prev',\r\n\t\t\tnextEl: '#features-slider-nav-next',\r\n\t\t\tdisabledClass: 'disable',\r\n\t\t},\r\n\t\tslidesPerView: 1,\r\n\t\tspaceBetween: 10,\r\n\t\tloop: true,\r\n\t\tautoplay: {\r\n\t\t\tdelay: 3000,\r\n\t\t},\r\n\t\teffect: 'fade',\r\n\t\tfadeEffect: {\r\n\t\t\tcrossFade: true\r\n\t\t},\r\n\t\tdisabledClass: 'nav-disable'\r\n\r\n\t})\r\n\r\n    const productPageThumbNail = new Swiper(\"#productPageThumbNail\", {\r\n        freeMode: true,\r\n        watchSlidesVisibility: true,\r\n        watchSlidesProgress: true,\r\n    \tbreakpoints: {\r\n    \t\t0: {\r\n\t\t        spaceBetween: 15,\r\n\t\t        slidesPerView: 2,\r\n        \t\tdirection: 'horizontal',\r\n    \t\t},\r\n    \t\t576: {\r\n\t\t        spaceBetween: 15,\r\n\t\t        slidesPerView: 3,\r\n        \t\tdirection: 'horizontal',\r\n    \t\t},\r\n    \t\t1366: {\r\n\t\t        spaceBetween: 15,\r\n\t\t        slidesPerView: 3,\r\n        \t\tdirection: 'vertical',\r\n    \t\t},\r\n    \t}\r\n    });\r\n\r\n    const productPageLarge = new Swiper(\"#productPageLarge\", {\r\n        spaceBetween: 10,\r\n        thumbs: {\r\n            swiper: productPageThumbNail,\r\n        },\r\n    });\r\n\r\n\tconst galleryEl = document.getElementById('lightgallery');\r\n\r\n\tif(!galleryEl) return;\r\n\r\n\tlightGallery(galleryEl, {\r\n\t\tdownload: false,\r\n\t\tthumbnail: true,\r\n\t\tspeed: 400,\r\n\t\tmousewheel: true,\r\n\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/sliders.js?");
+    /***/
+  },
+
+  /***/
+  0: function (module, exports, __webpack_require__) {
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\about.js */\"./src/assets/js/about.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\adaptiveSliders.js */\"./src/assets/js/adaptiveSliders.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\yo-guard\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/about.js_./src/assets/js/adaptiveSliders.js_./src/assets/js/script.js_./src/assets/js/sliders.js?");
+    /***/
+  }
+  /******/
+
+});

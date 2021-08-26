@@ -1,0 +1,49 @@
+.breadscrumb {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    @media (min-width:$md) {
+        margin-bottom: 20px;
+    }
+    & li {
+        display: flex;
+        align-items: center;
+        &:nth-child(2n) {
+            margin-left: 7px;
+            margin-right: 7px;
+            position: relative;
+            &:before {
+                content: '•';
+                margin-right: 7px;
+                font-size: 12px;
+                line-height: 15px;
+                color: var(black40);
+            }
+            &:after {
+                content: '•';
+                margin-left: 7px;
+                font-size: 12px;
+                line-height: 15px;
+                color: var(black40);
+            }
+        }
+        & a {
+            display: inline-block;
+            font-size: 13px;
+            line-height: 24px;
+            color: var(gray2);
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 133px;
+            text-overflow: ellipsis;
+        }
+        &:last-child {
+            & a {
+                color: var(black);
+            }
+            &:before {
+                color: var(black);
+            }
+        }
+    }
+}

@@ -28,19 +28,27 @@ $xs: 576px;
 
 * {
     font-family: Montserrat, sans-serif;
-    &::-webkit-scrollbar {
-        width: 0;
-        background-color: var(black);
-    }
-    &::-webkit-scrollbar-thumb {
-        border-radius: 6px;
-        background-color: var(yellow);
-    }
+    // &::-webkit-scrollbar {
+    //     width: 0;
+    //     background-color: var(black);
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     border-radius: 6px;
+    //     background-color: var(yellow);
+    // }
 }
 
 *,
 a {
     color: var(--black);
+}
+h1 {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 45px;
+    }
 }
 h2 {
     font-weight: 800;
@@ -56,6 +64,30 @@ h3 {
     line-height: 40px;
     @media (min-width: $xs) {
         font-size: 30px;
+    }
+}
+h4 {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 26px;
+    }
+}
+h5 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 24px;
+    }
+}
+h6 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 18px;
     }
 }
 p {
@@ -161,8 +193,11 @@ p {
 }
 .page-title {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 40px;
+    }
 }
 img.swiper-slide {
     pointer-events: auto;
@@ -170,4 +205,17 @@ img.swiper-slide {
 #lg-counter,
 #lg-counter * {
     color: var(--white);
+}
+
+.padding-box {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+    background: var(--blue-light3);
+    opacity: 1;
+    &.swiper-pagination-bullet-active {
+        background: var(--blue);
+    }
 }

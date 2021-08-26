@@ -4,6 +4,9 @@
 
 <main>
 
+
+<div class="padding-box">
+	
 @@include('assets/html/breadscrumb.html')
 
 <section class="catalog">
@@ -13,6 +16,15 @@
 		</h1>
 	</div>
 
+	<div class="catalog__controls fix-box">
+		<button class="catalog__filter-btn" id="filter-btn">
+				Открыть фильтр
+			<svg class="catalog__filter-icon" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M21 1H1L9 10.46V17L13 19V10.46L21 1Z" stroke="#21316A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+
+		</button>
+	</div>
 	<div class="catalog__container fix-box">
 		<aside class="catalog__filter-box">
 
@@ -109,9 +121,9 @@
 		</aside>
 		<div class="catalog__content">
 
-			<div class="catalog__cards grid grid-card-3">
+			<ul class="catalog__cards grid grid-card-3">
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -168,9 +180,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -227,9 +239,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -286,9 +298,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -345,9 +357,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -404,9 +416,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -463,9 +475,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -522,9 +534,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -581,9 +593,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -640,9 +652,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -699,9 +711,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -758,9 +770,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 				
-				<div class="card">
+				<li class="card">
 					<div class="card__header card-header">
 
 						<div class="card-header__ph-box">
@@ -817,9 +829,9 @@
 						</div>
 
 					</div>
-				</div>
+				</li>
 
-			</div>
+			</ul>
 
 			<div class="catalog__pagination catalog-pagination">
 				<div class="catalog-pagination__controls">
@@ -870,6 +882,10 @@
 		</div>
 	</div>
 </section>
+
+</div>
+
+@@include('assets/html/business-environment.html')
 
 </main>
 

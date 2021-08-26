@@ -1,6 +1,7 @@
 .header {
 	padding-top: 20px;
 	padding-bottom: 60px;
+	margin-bottom: -50px;
 	&__fix-box {
 	}
 	&__row {
@@ -108,25 +109,34 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	& a {
+	& li {
 		display: block;
 		flex: 1 1 auto;
-		font-weight: 500;
-		color: var(--white);
-		text-align: center;
-		line-height: 18.3px;
-		font-size: 15px;
-		padding: 26px;
-		@media (min-width: $xl) {
-			padding: 26px 39px;
+		& a {
+			display: block;
+			font-weight: 500;
+			color: var(--white);
+			text-align: center;
+			line-height: 18.3px;
+			font-size: 15px;
+			padding: 26px;
+			@media (min-width: $xl) {
+				padding: 26px 39px;
+			}
 		}
 		&:hover {
-			background-color: var(--blue-dark);
+			& a {
+				background-color: var(--blue-dark);
+			}
 		}
 		&:last-child {
-			background-color: var(--orange);
+			& a {
+				background-color: var(--orange);
+			}
 			&:hover {
-				background-color: var(--orange-dark);
+				& a {
+					background-color: var(--orange-dark);
+				}
 			}
 		}
 	}
