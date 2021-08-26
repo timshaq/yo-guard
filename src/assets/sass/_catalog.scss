@@ -13,6 +13,27 @@
         	display: block;
 			width: 285px;
         }
+        &.active-filter {
+	        @media (max-width: 1335px) {
+	        	position: fixed;
+	        	top: 0;
+	        	left: 0;
+	        	z-index: 10;
+	        	width: 100%;
+	        	height: 100%;
+	        	display: flex;
+	        	justify-content: center;
+	        	background-color: var(--white);
+	        	overflow-y: auto;
+	        	& .catalog__filter {
+	        		width: 290px;
+	        		margin-top: 70px;
+	        	}
+	        	& .catalog-filter__close {
+	        		display: block;
+	        	}
+	        }
+        }
 	}
 	&__filter {
 	}
@@ -84,6 +105,20 @@
 	padding: 30px;
 	border-radius: 5px;
 	border: 1px solid var(--border);
+	position: relative;
+	&__close {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: -40px;
+		right: 0;
+		display: none;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
 	&__fieldset {
 		padding-bottom: 25px;
 		& + .catalog-filter__fieldset {
@@ -245,4 +280,97 @@
 		}
 	}
 }
+.price-slider {
+	&__inputs {
+		display: flex;
+		justify-content: space-between;
+		& input {
+			width: 105px;
+			display: block;
+			padding: 29px 16px 13px 14px;
+			border: 1px solid var(--border);
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 17px;
+			color: var(--black);
+		}
+	}
+	&__separator {
+	}
+}
+.slider-input1 {
+}
+.slider-input2 {
+}
 
+.noUi-horizontal {
+	height: fit-content;
+	background: transparent;
+	border: none;
+}
+.noUi-horizontal .noUi-handle {
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+	box-shadow: 0px 5px 5px -2px rgba(26, 33, 75, 0.15);
+	box-shadow: none;
+	border: 2px solid;
+	right: -7px;
+	&:before,
+	&:after {
+		content: none;
+	}
+	&.noUi-handle-lower {
+		background-color: var(--white);
+		border-color: var(--gray);
+	}
+	&.noUi-handle-upper {
+		background-color: var(--blue);
+		border-color: var(--blue-light2);
+	}
+}
+
+.slider-label-input1, .slider-label-input2 {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	&:before {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.1em;
+		color: var(--gray);
+		position: absolute;
+		top: 8px;
+		left: 14px;
+		z-index: 2;
+
+	}
+
+}
+.slider-label-input1 {
+	&:before {
+		content: 'от';
+	}
+}
+.slider-label-input2 {
+	&:before {
+		content: 'до';
+	}
+}
+
+.noUi-connect {
+	background-color: var(--orange);
+}
+.noUi-connects {
+	height: 4px;
+	background-color: var(--gray-light);
+}
+.noUi-base {
+	height: 6px;
+	margin: 20px 0;
+}
+.noUi-target {
+	background: transparent;
+	box-shadow: none;
+}

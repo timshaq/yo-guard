@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<link rel="stylesheet" href="assets/lib/lightgallery/css/lightgallery.min.css">
+	<link rel="stylesheet" href="assets/lib/nouislider/nouislider.min.css">
 	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
 </head>
@@ -70,7 +71,7 @@
 					</div>
 				</div>
 
-				<button type="button" class="header__burger-box">
+				<button type="button" class="header__burger-box" id="burger-btn">
 					<img src="assets/img/burger.svg" alt="" class="header__burger">
 				</button>
 			</div>
@@ -104,7 +105,9 @@
 					</li>
 				</ul>
 			</nav>
-
+			<button type="button" class="header__close-burger-btn" id="burger-btn-close">
+				<img src="assets/img/close.svg" alt="">
+			</button>
 		</div>
 	</header>
 
@@ -143,7 +146,7 @@
 		</button>
 	</div>
 	<div class="catalog__container fix-box">
-		<aside class="catalog__filter-box">
+		<aside class="catalog__filter-box active-filter" id="filter-popup">
 
 			<form class="catalog__filter catalog-filter">
 				
@@ -226,12 +229,52 @@
 						</label>
 					</div>
 				</fieldset>
+				
+				<fieldset class="catalog-filter__fieldset">
+					<span class="catalog-filter__name">
+						Площадь
+					</span>
+					<div class="catalog-filter__fieldset-list">
+						<div class=" price-slider" data-min="0" data-max="1000" data-symbol="м²">
+							<div class="price-slider__inputs">
+								<label class="slider-label-input1">
+									<input type="text" readonly class="slider-input1">
+								</label>
+								<label class="slider-label-input2">
+									<input type="text" readonly class="slider-input2">
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				
+				<fieldset class="catalog-filter__fieldset">
+					<span class="catalog-filter__name">
+						Ставка в месяц
+					</span>
+					<div class="catalog-filter__fieldset-list">
+						<div class=" price-slider" data-min="15000" data-max="1000000" data-symbol="₽">
+							<div class="price-slider__inputs">
+								<label class="slider-label-input1">
+									<input type="text" readonly class="slider-input1">
+								</label>
+								<label class="slider-label-input2">
+									<input type="text" readonly class="slider-input2">
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
 
 				<div class="catalog-filter__submit-box">
 					<button type="submit" class="catalog-filter__submit btn btn-blue">
 						Показать
 					</button>
 				</div>
+
+				<button type="button" class="catalog-filter__close" id="filter-btn-close">
+					<img src="assets/img/close.svg" alt="">
+				</button>
 				
 			</form>
 			
@@ -1098,6 +1141,8 @@
 <script src="assets/lib/lightgallery/js/lightgallery.min.js"></script>
 <script src="assets/lib/lightgallery/js/lg-thumbnail.min.js"></script>
 <script src="assets/lib/lightgallery/js/lg-fullscreen.min.js"></script>
+
+<script src="assets/lib/nouislider/nouislider.min.js"></script>
 
 <script src="assets/lib/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/script.min.js"></script>

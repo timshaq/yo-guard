@@ -26,7 +26,7 @@
 		</button>
 	</div>
 	<div class="catalog__container fix-box">
-		<aside class="catalog__filter-box">
+		<aside class="catalog__filter-box active-filter" id="filter-popup">
 
 			<form class="catalog__filter catalog-filter">
 				
@@ -109,12 +109,52 @@
 						</label>
 					</div>
 				</fieldset>
+				
+				<fieldset class="catalog-filter__fieldset">
+					<span class="catalog-filter__name">
+						Площадь
+					</span>
+					<div class="catalog-filter__fieldset-list">
+						<div class=" price-slider" data-min="0" data-max="1000" data-symbol="м²">
+							<div class="price-slider__inputs">
+								<label class="slider-label-input1">
+									<input type="text" readonly class="slider-input1">
+								</label>
+								<label class="slider-label-input2">
+									<input type="text" readonly class="slider-input2">
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				
+				<fieldset class="catalog-filter__fieldset">
+					<span class="catalog-filter__name">
+						Ставка в месяц
+					</span>
+					<div class="catalog-filter__fieldset-list">
+						<div class=" price-slider" data-min="15000" data-max="1000000" data-symbol="₽">
+							<div class="price-slider__inputs">
+								<label class="slider-label-input1">
+									<input type="text" readonly class="slider-input1">
+								</label>
+								<label class="slider-label-input2">
+									<input type="text" readonly class="slider-input2">
+								</label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
 
 				<div class="catalog-filter__submit-box">
 					<button type="submit" class="catalog-filter__submit btn btn-blue">
 						Показать
 					</button>
 				</div>
+
+				<button type="button" class="catalog-filter__close" id="filter-btn-close">
+					<img src="assets/img/close.svg" alt="">
+				</button>
 				
 			</form>
 			

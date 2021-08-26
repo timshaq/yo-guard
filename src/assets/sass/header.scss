@@ -3,6 +3,103 @@
 	padding-bottom: 60px;
 	margin-bottom: -50px;
 	&__fix-box {
+		position: relative;
+	}
+	&.burger-active {
+		@media (max-width: 1199px) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--white);
+			z-index: 10;
+			overflow: hidden;
+			padding-bottom: 0;
+			& .header__fix-box {
+				overflow-y: auto;
+			}
+			& .header__burger-box {
+				display: none;
+			}
+			& .header__close-burger-btn {
+				display: block;
+			}
+			& .header__row {
+				flex-direction: column;
+				align-items: flex-start;
+				@media (min-width: $xs) {
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+				@media (min-width: $xl) {
+					justify-content: center;
+				}
+			}
+			& .header__logo-box {
+				margin-bottom: 50px;
+				@media (min-width: $xs) {
+					width: 100%;
+					& img {
+						width: 180px;
+						height: 71px;
+					}
+				}
+			}
+			& .header__department {
+				display: block;
+				padding-left: 0;
+				&:before {
+					display: none;
+				}
+				& + .header__department {
+					margin-left: 0;
+					margin-top: 20px;
+					@media (min-width: $xs) {
+						margin-top: 0;
+					}
+					@media (min-width: $xl) {
+						justify-content: center;
+						margin-left: 60px;
+					}
+				}
+			}
+			& .header-nav {
+				display: flex;
+				flex-direction: column;
+				margin-top: 40px;
+				margin-bottom: 100px;
+				@media (min-width: $xs) {
+					align-items: center;
+				}
+				& li {
+					& a {
+						color: var(--blue);
+						background-color: transparent;
+						padding: 20px 0;
+						text-align: start;
+					}
+					&:last-child {
+						& a {
+							color: var(--orange);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__close-burger-btn {
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		width: 30px;
+		height: 30px;
+		display: none;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
 	}
 	&__row {
 		display: flex;
@@ -104,7 +201,6 @@
 	display: none;
 	@media (min-width: $lg) {
 		border-radius: 5px;
-		background-color: var(--blue);
 		overflow: hidden;
 		display: flex;
 		justify-content: space-between;
@@ -120,6 +216,7 @@
 			line-height: 18.3px;
 			font-size: 15px;
 			padding: 26px;
+			background-color: var(--blue);
 			@media (min-width: $xl) {
 				padding: 26px 39px;
 			}
