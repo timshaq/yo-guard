@@ -1,6 +1,26 @@
 .banners-slider {
 	&__fix-box {
 		position: relative;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		@media (min-width: $xs) {
+			margin-right: auto;
+			margin-left: auto;
+	        width: 540px;
+	    }
+	    @media (min-width:$md) {
+	        width: 708px;
+	    }
+	    @media (min-width:$lg) {
+	        width: 960px;
+	    }
+	    @media (min-width:$xl) {
+	        width: 1170px;
+	    }
+	    @media (min-width:$xxl) {
+	        width: 1230px;
+	    }
 	}
 	&__list {
 	}
@@ -8,13 +28,25 @@
 	}
 	& .slider__nav {
 		border: 6px solid var(--white);
+		display: none;
+		@media (min-width: $xs) {
+			display: block;
+		}
 		&_prev {
-			left: 0;
+			left: 10px;
 			transform: translate(-50%,-50%);
+			@media (min-width: $xxl) {
+				left: 0;
+				transform: translate(-50%,-50%);
+			}
 		}
 		&_next {
-			right: 0;
+			right: 10px;
 			transform: translate(50%,-50%);
+			@media (min-width: $xxl) {
+				right: 0;
+				transform: translate(50%,-50%);
+			}
 		}
 	}
 }
@@ -25,13 +57,31 @@
 	overflow: hidden;
 	position: relative;
 	&__text-box {
-		padding-top: 58px;
-		padding-bottom: 58px;
-		padding-left: 100px;
-		padding-right: 160px;
 		position: relative;
 		z-index: 2;
-		width: 59.7561%;
+		width: 100%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		padding-left: 15px;
+		padding-right: 30px;
+		@media (min-width: $xs) {
+			width: 90%;
+			padding-left: 50px;
+			padding-right: 80px;
+			padding-top: 58px;
+			padding-bottom: 58px;
+		}
+		@media (min-width: $md) {
+			width: 80%;
+		}
+		@media (min-width: $lg) {
+			padding-left: 100px;
+			padding-right: 160px;
+			width: 70%;
+		}
+		@media (min-width: $xl) {
+			width: 59.7561%;
+		}
 	}
 	&__text {
 		position: relative;
@@ -50,10 +100,14 @@
 	&__title {
 		color: var(--white);
 		font-weight: 800;
-		font-size: 34px;
-		line-height: 40px;
+		font-size: 22px;
+		line-height: 29px;
 		letter-spacing: 0.02em;
 		margin-bottom: 23px;
+		@media (min-width: $xs) {
+			font-size: 34px;
+			line-height: 40px;
+		}
 	}
 	&__p {
 		color: var(--white);

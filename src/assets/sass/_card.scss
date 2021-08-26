@@ -224,12 +224,16 @@
 .ph-card {
 	position: relative;
 	padding-top: 300px;
-	padding-right: 105px;
 	padding-bottom: 30px;
-	padding-left: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
 	display: flex;
 	border-radius: 5px;
 	overflow: hidden;
+	@media (min-width: $xs) {
+		padding-right: 105px;
+		padding-left: 30px;
+	}
 	&__ph,
 	&__shadow {
 		position: absolute;

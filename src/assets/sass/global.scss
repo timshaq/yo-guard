@@ -1,4 +1,4 @@
-$xxl: 1440px;
+$xxl: 1336px;
 $xl: 1200px;
 $lg: 992px;
 $md: 768px;
@@ -44,13 +44,19 @@ a {
 }
 h2 {
     font-weight: 800;
-    font-size: 40px;
+    font-size: 24px;
     line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 40px;
+    }
 }
 h3 {
     font-weight: 800;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 40px;
+    @media (min-width: $xs) {
+        font-size: 30px;
+    }
 }
 p {
     font-weight: 500;
@@ -64,14 +70,17 @@ p {
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width:$xs) {
+        width: 540px;
+    }
     @media (min-width:$md) {
         width: 708px;
     }
+    @media (min-width:$lg) {
+        width: 960px;
+    }
     @media (min-width:$xl) {
         width: 1170px;
-    }
-    @media (min-width:1336px) {
-        width: 1230px;
     }
     @media (min-width:$xxl) {
         width: 1230px;

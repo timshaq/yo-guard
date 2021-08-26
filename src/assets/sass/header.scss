@@ -6,6 +6,10 @@
 	&__row {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+		@media (min-width: $xl) {
+			justify-content: flex-start;
+		}
 	}
 	&__logo-box {
 		width: 180px;
@@ -19,11 +23,30 @@
 		height: 100%;
 		object-fit: contain;
 	}
+	&__burger-box {
+		width: 40px;
+		height: 40px;
+		@media(min-width: $xl) {
+			display: none;
+		}
+	}
+	&__burger {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		
+	}
 	&__department {
-		padding-left: 66px;
+		padding-left: 46px;
 		position: relative;
+		@media(min-width: $xxl) {
+			padding-left: 66px;
+		}
 		& + .header__department {
-			margin-left: 62px;
+			margin-left: 42px;
+			@media(min-width: $xxl) {
+				margin-left: 62px;
+			}
 		}
 		&:before {
 			content: '';
@@ -41,8 +64,11 @@
 	}
 }
 .header-department {
-	display: flex;
-	align-items: center;
+	display: none;
+	@media(min-width: $xl) {
+		display: flex;
+		align-items: center;
+	}
 	&__icon-box {
 		margin-right: 18px;
 	}
@@ -74,20 +100,26 @@
 	}
 }
 .header-nav {
-	border-radius: 5px;
-	background-color: var(--blue);
-	overflow: hidden;
-	display: flex;
-	justify-content: space-between;
+	display: none;
+	@media (min-width: $lg) {
+		border-radius: 5px;
+		background-color: var(--blue);
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+	}
 	& a {
 		display: block;
 		flex: 1 1 auto;
-		padding: 26px 39px;
 		font-weight: 500;
-		font-size: 15px;
-		line-height: 18.3px;
 		color: var(--white);
 		text-align: center;
+		line-height: 18.3px;
+		font-size: 15px;
+		padding: 26px;
+		@media (min-width: $xl) {
+			padding: 26px 39px;
+		}
 		&:hover {
 			background-color: var(--blue-dark);
 		}
