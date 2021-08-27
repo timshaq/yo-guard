@@ -1,0 +1,431 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	overflow: hidden;
+	&__header {
+	}
+	&__body {
+	}
+	&__controls {
+	}
+	& .card-header__ph-shadow,
+	& .card-text__name,
+	& .card-controls,
+	& .card-controls__booking,
+	& .card-controls__about {
+		transition: all .2s linear;
+	}
+	&:hover {
+		& .card-header__ph-shadow,
+		& .card-text__name,
+		& .card-controls,
+		& .card-controls__booking,
+		& .card-controls__about {
+			transition: all .4s linear;
+		}
+		& .card-text__name {
+			transition: all .2s linear;
+		}
+		& .card-header__ph-shadow {
+			height: 100%;
+		}
+		& .card-text__name {
+			color: var(--orange)
+		}
+		& .card-controls {
+			border-color: transparent;
+		}
+		& .card-controls__booking {
+			background-color: var(--blue);
+			color: var(--white);
+			&:hover {
+				background-color: var(--blue-dark);
+				transition: all .2s linear;
+			}
+		}
+		& .card-controls__about {
+			background-color: var(--orange);
+			color: var(--white);
+			border: none;
+			&:hover {
+				background-color: var(--orange-dark);
+				transition: all .2s linear;
+			}
+		}
+	}
+}
+.card-header {
+	position: relative;
+	&__ph-box {
+		width: 100%;
+		height: 200px;
+	}
+	&__ph {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+	&__ph-shadow {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 80px;
+		background: linear-gradient(180deg, rgba(26, 33, 75, 0) 0%, #1A214B 100%);
+	}
+	&__props {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	&__location {
+		& + .card-header__space {
+			margin-top: 10px;
+		}
+	}
+	&__location-icon {
+	}
+	&__location-name {
+	}
+	&__space {
+		display: flex;
+		align-items: center;
+	}
+	&__square {
+		& + .card-header__rooms {
+			margin-left: 10px;
+		}
+	}
+	&__rooms {
+	}
+}
+.card-body {
+	border: 1px solid var(--gray);
+	border-radius: 0 0 5px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.card-text {
+	padding: 15px 30px 0;
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+	&__name {
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	&__price-box {
+		margin-top: 12px;
+		margin-bottom: 31px;
+		text-align: center;
+		margin-top: auto;
+	}
+	&__price {
+		color: var(--blue);
+	}
+	&__period {
+		color: var(--gray);
+	}
+}
+.card-controls {
+	display: flex;
+	border-top: 1px solid var(--border);
+	&__booking,
+	&__about {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+		color: var(--blue-light);
+		text-align: center;
+		flex: 1 1 auto;
+		padding-top: 16px;
+		padding-bottom: 18px;
+	}
+	&__booking {
+		& + .card-controls__about {
+			border-left: 1px solid var(--border);
+		}
+	}
+	&__about {
+	}
+}
+
+.card-name {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	color: var(--black);
+}
+
+.card-price {
+	font-weight: 800;
+	font-size: 22px;
+	line-height: 27px;
+	letter-spacing: 0.02em;
+}
+
+.card-period {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.02em;
+}
+
+.card-label-location {
+	padding: 9px 17px 9px 9px;
+	background-color: var(--blue);
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+	width: fit-content;
+	&__icon {
+		width: 13px;
+		height: 10px;
+		object-fit: contain;
+		margin-right: 9px;
+	}
+	&__name {
+		color: var(--white);
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 13px;
+	}
+}
+
+.card-label-square {
+	font-weight: 800;
+	font-size: 13px;
+	line-height: 13px;
+	color: var(--white);
+	padding: 9px 12px;
+	background-color: var(--orange);
+	border-radius: 3px;
+}
+
+.card-label-rooms {
+	padding: 9px 17px;
+	background-color: var(--white);
+	color: var(--blue);
+	border-radius: 3px;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 13px;
+}
+
+
+
+
+.ph-card {
+	position: relative;
+	padding-top: 300px;
+	padding-bottom: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: flex;
+	border-radius: 5px;
+	overflow: hidden;
+	@media (min-width: $xs) {
+		padding-right: 105px;
+		padding-left: 30px;
+	}
+	&__ph,
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	&__ph {
+		object-fit: cover;
+		z-index: 1;
+	}
+	&__shadow {
+		background: linear-gradient(180deg, rgba(26, 33, 75, 0) 0%, #1A214B 100%);
+		z-index: 2;
+	}
+	&__text {
+		position: relative;
+		z-index: 3;
+		margin-top: auto;
+	}
+	&__price-box {
+		margin-top: 13px;
+	}
+	&__name,
+	&__price,
+	&__period {
+		color: var(--white);
+	}
+	&__name {
+	}
+	&__price {
+	}
+	&__period {
+	}
+	&__location {
+		margin-top: 15px;
+	}
+	&__space {
+		display: flex;
+		margin-top: 10px;
+	}
+	&__square {
+		& + .ph-card__rooms {
+			margin-left: 10px;
+		}
+	}
+	&__rooms {
+	}
+}
+
+
+
+.row-card {
+	display: flex;
+	box-shadow: 0px 20px 20px -15px rgba(26, 33, 75, 0.15);
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	flex-direction: column;
+	@media (min-width: $md) {
+		flex-direction: row;
+	}
+	&__advise-icon {
+		display: none;
+	}
+	&.advise {
+		border: 2px solid var(--green);
+		box-shadow: 0px 0px 20px rgba(29, 176, 26, 0.25);
+		& .row-card__advise-icon {
+			display: block;
+			width: 10px;
+			height: 13px;
+			object-fit: contain;
+			position: absolute;
+			bottom: 30px;
+			right: 30px;
+			@media (min-width: $md) {
+				bottom: auto;
+				top: 13px;
+				right: 13px;
+			}
+		}
+
+	}
+	& + .row-card {
+		margin-top: 40px;
+	}
+	& .row-card__ph-shadow,
+	& .row-card__title {
+		transition: all .2s linear;
+	}
+	&:hover {
+		& .row-card__ph-shadow {
+			height: 100%;
+			transition: all .4s linear;
+		}
+		& .row-card__title {
+			color: var(--orange);
+			transition: all .2s linear;
+		}
+	}
+	&__ph-box {
+		width: 100%;
+		height: 300px;
+		position: relative;
+		display: flex;
+		@media (min-width: $md) {
+			min-width: 285px;
+			width: 285px;
+			min-height: 240px;
+			height: 100%;
+		}
+	}
+	&__ph {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	&__ph-shadow {
+		width: 100%;
+		height: 50%;
+		background: linear-gradient(180deg, rgba(26, 33, 75, 0) 0%, #1A214B 100%);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
+	&__ph-text {
+		position: relative;
+		z-index: 3;
+		margin-top: auto;
+		padding: 10px;
+	}
+	&__location {
+		& + .row-card__space {
+			margin-top: 10px;
+		}
+	}
+	&__location-icon {
+	}
+	&__location-name {
+	}
+	&__space {
+		display: flex;
+	}
+	&__square {
+		& + .row-card__rooms {
+			margin-left: 10px;
+		}
+	}
+	&__rooms {
+	}
+	&__content {
+		border-radius: 5px;
+		border: 1px solid var(--border);
+		padding: 28px 30px 30px;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 13px;
+	}
+	&__about {
+		margin-bottom: 12px;
+	}
+	&__about-txt {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+	}
+	&__about-link {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: var(--blue3);
+	}
+	& p {
+		color: var(--gray3);
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	&__more-box {
+	}
+	&__more {
+		width: 140px;
+		margin-top: 16px;
+	}
+}

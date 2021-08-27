@@ -45,7 +45,7 @@ const build = {
 
 // WATCH
 function styles() {
-    return gulp.src('./src/assets/sass/main.sass')
+    return gulp.src('./src/assets/style/main.scss')
     .pipe(
         sass({
             outputStyle: "expanded"

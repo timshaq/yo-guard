@@ -1,0 +1,240 @@
+.header {
+	padding-top: 20px;
+	padding-bottom: 60px;
+	margin-bottom: -50px;
+	&__fix-box {
+		position: relative;
+	}
+	&.burger-active {
+		@media (max-width: 1199px) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--white);
+			z-index: 10;
+			overflow: hidden;
+			padding-bottom: 0;
+			& .header__fix-box {
+				overflow-y: auto;
+			}
+			& .header__burger-box {
+				display: none;
+			}
+			& .header__close-burger-btn {
+				display: block;
+			}
+			& .header__row {
+				flex-direction: column;
+				align-items: flex-start;
+				@media (min-width: $xs) {
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+				@media (min-width: $xl) {
+					justify-content: center;
+				}
+			}
+			& .header__logo-box {
+				margin-bottom: 50px;
+				@media (min-width: $xs) {
+					width: 100%;
+					& img {
+						width: 180px;
+						height: 71px;
+					}
+				}
+			}
+			& .header__department {
+				display: block;
+				padding-left: 0;
+				&:before {
+					display: none;
+				}
+				& + .header__department {
+					margin-left: 0;
+					margin-top: 20px;
+					@media (min-width: $xs) {
+						margin-top: 0;
+					}
+					@media (min-width: $xl) {
+						justify-content: center;
+						margin-left: 60px;
+					}
+				}
+			}
+			& .header-nav {
+				display: flex;
+				flex-direction: column;
+				margin-top: 40px;
+				margin-bottom: 100px;
+				@media (min-width: $xs) {
+					align-items: center;
+				}
+				& li {
+					& a {
+						color: var(--blue);
+						background-color: transparent;
+						padding: 20px 0;
+						text-align: start;
+					}
+					&:last-child {
+						& a {
+							color: var(--orange);
+						}
+					}
+				}
+			}
+		}
+	}
+	&__close-burger-btn {
+		position: absolute;
+		top: 20px;
+		right: 15px;
+		width: 30px;
+		height: 30px;
+		display: none;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (min-width: $xl) {
+			justify-content: flex-start;
+		}
+	}
+	&__logo-box {
+		width: 180px;
+		height: 71px;
+		display: flex;
+		justify-content: flex-start;
+		margin-right: 69px;
+	}
+	&__logo-ph {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&__burger-box {
+		width: 40px;
+		height: 40px;
+		@media(min-width: $xl) {
+			display: none;
+		}
+	}
+	&__burger {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		
+	}
+	&__department {
+		padding-left: 46px;
+		position: relative;
+		@media(min-width: $xxl) {
+			padding-left: 66px;
+		}
+		& + .header__department {
+			margin-left: 42px;
+			@media(min-width: $xxl) {
+				margin-left: 62px;
+			}
+		}
+		&:before {
+			content: '';
+			width: 1px;
+			height: 60px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background-color: var(--border);
+		}
+	}
+	&__nav {
+		margin-top: 19px;
+	}
+}
+.header-department {
+	display: none;
+	@media(min-width: $xl) {
+		display: flex;
+		align-items: center;
+	}
+	&__icon-box {
+		margin-right: 18px;
+	}
+	&__icon {
+	}
+	&__txt {
+		display: flex;
+		flex-direction: column;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 11px;
+		line-height: 25px;
+		text-transform: uppercase;
+		color: var(--gray);
+	}
+	&__tel {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 25px;
+		letter-spacing: 0.04em;
+		color: var(--blue);
+	}
+	&__time {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--black);
+	}
+}
+.header-nav {
+	display: none;
+	@media (min-width: $lg) {
+		border-radius: 5px;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+	}
+	& li {
+		display: block;
+		flex: 1 1 auto;
+		& a {
+			display: block;
+			font-weight: 500;
+			color: var(--white);
+			text-align: center;
+			line-height: 18.3px;
+			font-size: 15px;
+			padding: 26px;
+			background-color: var(--blue);
+			@media (min-width: $xl) {
+				padding: 26px 39px;
+			}
+		}
+		&:hover {
+			& a {
+				background-color: var(--blue-dark);
+			}
+		}
+		&:last-child {
+			& a {
+				background-color: var(--orange);
+			}
+			&:hover {
+				& a {
+					background-color: var(--orange-dark);
+				}
+			}
+		}
+	}
+}

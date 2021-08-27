@@ -2109,7 +2109,7 @@ img.swiper-slide {
   color: var(--gray3);
 }
 
-.breadscrumb li a {
+.breadscrumb li a, .breadscrumb li span {
   display: inline-block;
   font-size: 13px;
   line-height: 24px;
@@ -2119,11 +2119,11 @@ img.swiper-slide {
   text-overflow: ellipsis;
 }
 
-.breadscrumb li:not(:last-child) a {
+.breadscrumb li:not(:last-child) a, .breadscrumb li:not(:last-child) span {
   color: var(--gray3);
 }
 
-.breadscrumb li:not(:last-child):hover a {
+.breadscrumb li:not(:last-child):hover a, .breadscrumb li:not(:last-child):hover span {
   color: var(--orange);
 }
 
@@ -2135,7 +2135,7 @@ img.swiper-slide {
   color: var(--orange);
 }
 
-.breadscrumb li:last-child a {
+.breadscrumb li:last-child a, .breadscrumb li:last-child span {
   color: var(black);
 }
 
@@ -2339,7 +2339,7 @@ img.swiper-slide {
   cursor: pointer;
 }
 
-.catalog-filter__fieldset-list label:hover input + div + span {
+.catalog-filter__fieldset-list label:hover input + span + span {
   color: var(--blue);
 }
 
@@ -2351,7 +2351,7 @@ img.swiper-slide {
   position: absolute;
 }
 
-.catalog-filter__fieldset-list label input[type="checkbox"] + div {
+.catalog-filter__fieldset-list label input[type="checkbox"] + span {
   width: 16px;
   height: 16px;
   min-width: 16px;
@@ -2361,9 +2361,10 @@ img.swiper-slide {
   border: 1px solid var(--border);
   position: relative;
   margin-top: 6px;
+  display: block;
 }
 
-.catalog-filter__fieldset-list label input[type="checkbox"] + div:before {
+.catalog-filter__fieldset-list label input[type="checkbox"] + span:before {
   content: url("../img/input-checked.svg");
   position: absolute;
   top: 50%;
@@ -2375,23 +2376,23 @@ img.swiper-slide {
   height: 100%;
 }
 
-.catalog-filter__fieldset-list label input[type="checkbox"] + div + span {
+.catalog-filter__fieldset-list label input[type="checkbox"] + span + span {
   margin-left: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 30px;
 }
 
-.catalog-filter__fieldset-list label input[type="checkbox"] + div + span span {
+.catalog-filter__fieldset-list label input[type="checkbox"] + span + span span {
   color: var(--gray);
 }
 
-.catalog-filter__fieldset-list label input[type="checkbox"]:checked + div {
+.catalog-filter__fieldset-list label input[type="checkbox"]:checked + span {
   background-color: var(--orange);
   border-color: var(--orange);
 }
 
-.catalog-filter__fieldset-list label input[type="checkbox"]:checked + div + span {
+.catalog-filter__fieldset-list label input[type="checkbox"]:checked + span + span {
   color: var(--blue);
 }
 
@@ -2578,18 +2579,16 @@ img.swiper-slide {
   box-shadow: none;
   border: 2px solid;
   right: -7px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-color: var(--gray);
 }
 
 .noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
   content: none;
 }
 
-.noUi-horizontal .noUi-handle.noUi-handle-lower {
-  background-color: var(--white);
-  border-color: var(--gray);
-}
-
-.noUi-horizontal .noUi-handle.noUi-handle-upper {
+.noUi-horizontal .noUi-handle:hover {
   background-color: var(--blue);
   border-color: var(--blue-light2);
 }
