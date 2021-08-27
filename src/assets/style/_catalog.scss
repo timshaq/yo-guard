@@ -324,7 +324,7 @@
 	cursor: pointer;
 	background-color: var(--white);
 	border-color: var(--gray);
-	&:hover {
+	&:hover, &.noUi-active {
 		background-color: var(--blue);
 		border-color: var(--blue-light2);
 

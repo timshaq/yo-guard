@@ -2588,7 +2588,7 @@ img.swiper-slide {
   content: none;
 }
 
-.noUi-horizontal .noUi-handle:hover {
+.noUi-horizontal .noUi-handle:hover, .noUi-horizontal .noUi-handle.noUi-active {
   background-color: var(--blue);
   border-color: var(--blue-light2);
 }

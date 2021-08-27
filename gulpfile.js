@@ -21,7 +21,7 @@ const fileinclude = require("gulp-file-include");
 
 const src = {
     js: './src/assets/js/**/*',
-    css: './src/assets/sass/**/*',
+    css: './src/assets/style/**/*',
     img: './src/assets/img/**/*',
     lib: './src/assets/lib/**/*',
     fonts: './src/assets/fonts/**/*',
